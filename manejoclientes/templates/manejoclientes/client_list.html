@@ -1,0 +1,13 @@
+{% extends 'manejoclientes/base.html' %}
+
+    {% block content %}
+        {% for client in clients %}
+            <div class="client">
+                <div class="date">
+                    {{ client.added_date }}
+                </div>
+                <h1><a href="{% url 'manejoclientes.views.client_detail' pk=client.pk %}">{{ client.first_name}} {{client.last_name}}</a></h1>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
+    {% endblock content %}

@@ -1,0 +1,13 @@
+{% extends 'manejoclientes/base.html' %}
+
+    {% block content %}
+        <div class="client">
+            {% if client.added_date %}
+                <div class="date">
+                    {{ client.added_date }}
+                </div>
+            {% endif %}
+            <h1>{{ client.first_name }} {{ client.last_name}}</h1>
+            <p>{{ post.last_name|linebreaksbr }}</p>
+        </div>
+    {% endblock %}
