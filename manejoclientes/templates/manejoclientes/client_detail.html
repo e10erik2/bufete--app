@@ -7,6 +7,7 @@
                     {{ client.added_date }}
                 </div>
             {% endif %}
+            <a class="btn btn-default" href="{% url 'client_edit' pk=client.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
             <h1>{{ client.first_name }} {{ client.last_name}}</h1>
             <p>{{ post.last_name|linebreaksbr }}</p>
         </div>
